@@ -16,7 +16,7 @@ distro-picker encodes that decision tree into a weighted scoring engine so peopl
 
 The app bundles 19 distros and 9 desktop environments, each tagged with trait scores across ~15 dimensions (beginner-friendliness, stability, gaming support, NVIDIA compatibility, etc.). Your quiz answers generate a weight vector, and the final ranking is a dot product of your weights against each distro's traits.
 
-It's not magic — it's the same logic an experienced Linux user applies when recommending a distro, just automated.
+It's not magic  it's the same logic an experienced Linux user applies when recommending a distro, just automated.
 
 ![Quiz](docs/screenshots/quiz.png)
 
@@ -27,9 +27,9 @@ It's not magic — it's the same logic an experienced Linux user applies when re
 - **Side-by-side comparison** of the top 2 picks with pros, cons, trait badges, and personalized "why this fits you" reasoning
 - **Desktop environment recommendation** factoring in RAM, familiarity, and customization preference
 - **One-click ISO download** button on every result card
-- **Cheat sheet export** — downloads a Markdown file with your results and getting-started steps
+- **Cheat sheet export** - downloads a Markdown file with your results and getting-started steps
 - **Dark/light theme** with system preference detection
-- **Fully responsive** — works on mobile
+- **Fully responsive** - works on mobile
 
 ![Results](docs/screenshots/results.png)
 
@@ -48,7 +48,7 @@ Download the binary for your platform from the [releases](https://github.com/Tai
 chmod +x distro-picker-linux-amd64
 ./distro-picker-linux-amd64
 
-# Windows — just double-click distro-picker-windows-amd64.exe
+# Windows - just double-click distro-picker-windows-amd64.exe
 ```
 
 Your browser opens automatically to `http://localhost:9514`. Close the terminal (or Ctrl+C) to stop.
