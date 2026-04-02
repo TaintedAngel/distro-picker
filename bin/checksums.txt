@@ -1,0 +1,3 @@
+69cf0fa6da1af97ade94f8dadfc16056d1fae93b6f2f09b60938d8635860dadd  distro-picker-linux-amd64
+a67c1e2c13cdd41f44edf36076268c1312c6af01a84aa1abd380eaa8f2cf35d6  distro-picker-linux-arm64
+c6f2fb70e8b06f81772168a46d6a50df01962f7157460f90e9717ef2deb30bd6  distro-picker-windows-amd64.exe
