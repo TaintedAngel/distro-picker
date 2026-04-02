@@ -38,7 +38,6 @@ func main() {
 	}()
 
 	if !*noBrowser {
-		// Small delay so the server is ready before the browser hits it.
 		time.AfterFunc(200*time.Millisecond, func() {
 			openBrowser(fmt.Sprintf("http://localhost:%d", *port))
 		})
@@ -46,6 +45,20 @@ func main() {
 
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+
+	// Auto-shutdown: exit when the browser tab is closed (no heartbeat for 10s).
+	go func() {
+		ticker := time.NewTicker(3 * time.Second)
+		defer ticker.Stop()
+		for range ticker.C {
+			if time.Since(server.LastHeartbeat()) > 10*time.Second {
+				log.Println("no browser connected, shutting down")
+				quit <- syscall.SIGTERM
+				return
+			}
+		}
+	}()
+
 	<-quit
 
 	log.Println("shutting down…")

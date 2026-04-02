@@ -108,6 +108,9 @@ class App {
   }
 }
 
+// Keep the server alive while the tab is open; it auto-exits when we leave.
+setInterval(() => fetch('/api/heartbeat', { method: 'POST' }).catch(() => {}), 3000);
+
 const app = new App();
 app.init().catch((err) => {
   document.getElementById('app').innerHTML = `
